@@ -130,4 +130,4 @@ const clock = (function () {
 
 })();
 
-export { clock, Tickable, TickEventArgs };
+export { clock };
