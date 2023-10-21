@@ -1,13 +1,12 @@
 {
   "name": "@maffieramos/interval-clock",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "loops and queued callbacks (uses requestAnimationFrame over setTimeout)",
-  "main": "dist/clock.js",
-  "types": "dist/interval-clock.d.ts",
+  "main": "dist/interval-clock.esm.mjs",
+  "types": "dist/interval-clock.esm.d.ts",
   "scripts": {
     "lint": "eslint src/index.ts --fix && echo \"lint clean\"",
     "test": "jest ./tests",
-    "start": "node dist/clock.esm.js",
     "build": "rollup -c"
   },
   "author": "Elia Cohen",
