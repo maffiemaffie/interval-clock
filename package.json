@@ -1,6 +1,6 @@
 {
   "name": "@maffieramos/interval-clock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "loops and queued callbacks (uses requestAnimationFrame over setTimeout)",
   "main": "dist/clock.js",
   "types": "dist/interval-clock.d.ts",
