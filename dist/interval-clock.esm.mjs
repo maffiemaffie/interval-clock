@@ -2,7 +2,7 @@
  * Clock for scheduling one-shot and looping events.
  * @returns the public-facing methods necessary to queue events
  */
-var clock = (function () {
+var Clock = (function () {
     var queuedEvents = [];
     var startedAt;
     /**
@@ -17,7 +17,7 @@ var clock = (function () {
             if (!event_1.lastTick)
                 event_1.lastTick = timestamp;
             if (timestamp - event_1.lastTick > event_1.tickDuration) {
-                event_1.listener.onTick.call(event_1.listener, clock, {
+                event_1.listener.onTick.call(event_1.listener, Clock, {
                     now: timestamp,
                     sinceStart: timestamp - startedAt,
                     deltaTime: timestamp - event_1.lastTick
@@ -70,4 +70,4 @@ var clock = (function () {
     };
 })();
 
-export { clock };
+export { Clock };

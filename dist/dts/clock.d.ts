@@ -16,11 +16,11 @@ interface TickEventArgs {
     deltaTime: number;
 }
 /**
- * An object containing a method to be called by the {@link clock} object.
+ * An object containing a method to be called by the {@link Clock} object.
  */
 interface Tickable {
     /**
-     * Handles a {@link clock} tick.
+     * Handles a {@link Clock} tick.
      * @param sender The object that called this method.
      * @param args The properties provided for handling a tick.
      */
@@ -30,7 +30,7 @@ interface Tickable {
  * Clock for scheduling one-shot and looping events.
  * @returns the public-facing methods necessary to queue events
  */
-declare const clock: {
+declare const Clock: {
     /**
      * Starts the clock.
      */
@@ -48,4 +48,4 @@ declare const clock: {
      */
     queue: (listener: Tickable, queueAfterMilliseconds: number) => void;
 };
-export { clock };
+export { Clock, Tickable, TickEventArgs };
